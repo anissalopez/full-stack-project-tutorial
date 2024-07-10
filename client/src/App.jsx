@@ -5,15 +5,20 @@ function App() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-      fetch("http://127.0.0.1:5555/movies")
+      fetch("/movies")
         .then((r) => r.json())
         .then((movies) => setMovies(movies));
     }, []);
+
+  
 
     
 
   return (
     <>
+    <h1>
+      Testing
+    </h1>
         {
           movies.map((movie)=>{
             return(
