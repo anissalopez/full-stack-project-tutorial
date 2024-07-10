@@ -5,7 +5,7 @@ function App() {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-      fetch("http://127.0.0.1:5555/movies")
+      fetch("http://127.0.0.1:5555")
         .then((r) => r.json())
         .then((movies) => setMovies(movies));
     }, []);
